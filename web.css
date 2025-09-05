@@ -1,0 +1,28 @@
+/* Basic page styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+  text-align: center;
+}
+
+header, footer {
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+main {
+  padding: 2rem;
+}
+
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}

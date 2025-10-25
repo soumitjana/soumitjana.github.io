@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personal Website</title>
+  <style>
+    /* Premium palette */
+    :root{
+      --blue-popsicle: #0f2862;
+      --redline: #9e363a;
+      --purple-shadow: #091f36;
+      --grey-blue-leaf: #4f5f76;
+      --bg: #f7f9fb;
+      --muted: #6b7a8a;
+    }
+    body{font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:var(--purple-shadow); margin:0}
+    header{background:linear-gradient(90deg,var(--blue-popsicle),var(--purple-shadow)); color:white; padding:28px 24px}
+    header h1{margin:0;font-size:1.6rem}
+    header p{margin:6px 0 0; color:rgba(255,255,255,0.9)}
+    .container{max-width:1000px;margin:28px auto;padding:0 16px}
+    .card{background:white;border-radius:10px;box-shadow:0 6px 20px rgba(15,40,98,0.06);padding:18px;margin-bottom:16px}
+    h2.section-title{color:var(--blue-popsicle);margin:0 0 8px}
+    .phase-card{border-left:4px solid var(--grey-blue-leaf);padding:12px 16px;margin:12px 0;border-radius:6px}
+    label.checkbox-container{display:flex;align-items:center;gap:10px}
+    input[type=checkbox]{width:18px;height:18px}
+    .muted{color:var(--muted)}
+    footer{padding:20px 0;text-align:center;color:var(--muted)}
+    .btn{background:var(--blue-popsicle);color:white;padding:8px 12px;border-radius:6px;border:none;cursor:pointer}
+  </style>
+  
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Soumit Jana — Personal Website</h1>
+      <p>Learning roadmap & projects</p>
+    </div>
+  </header>
+
+  <main class="container">
+    
+<div class="card">
+    <h2 class="section-title">🧭 Learning Roadmap</h2>
+
+    
+        <p class="muted">Sign in to track your progress. The roadmap is visible below.</p>
+        
+        <section class="roadmap-section">
+            <h3>Full-Stack AI Engineer Path</h3>
+            <p class="muted">A comprehensive roadmap covering deep learning, MLOps, and large language models</p>
+            
+            <div class="phase-card">
+                <h4>Phase 1 – Deep Learning Foundations</h4>
+                <p class="muted">Master fundamental deep learning concepts and PyTorch</p>
+                <div>
+                    <strong>Topics</strong>
+                    <ul>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="147">
+                                <span>Neural network basics: perceptron, activation functions, forward/backprop</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="148">
+                                <span>Loss functions (MSE, Cross-Entropy), optimizers (SGD, Adam)</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="149">
+                                <span>Regularisation: dropout, batch norm, early stopping</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="150">
+                                <span>CNNs: convolution, pooling, feature maps</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="151">
+                                <span>RNNs/LSTMs/GRUs: sequence modeling</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="152">
+                                <span>PyTorch: tensor operations, DataLoader, custom training loop</span>
+                            </label>
+                        </li>
+                    
+                    </ul>
+                </div>
+                <div>
+                    <strong>Projects</strong>
+                    <ul>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="project-checkbox" data-project-id="56">
+                                <span>Neural Network from Scratch</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="project-checkbox" data-project-id="57">
+                                <span>CNN Image Classifier</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="project-checkbox" data-project-id="58">
+                                <span>Deploy CNN with Streamlit</span>
+                            </label>
+                        </li>
+                    
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="phase-card">
+                <h4>Phase 2 – NLP &amp; Transformers</h4>
+                <p class="muted">Master modern NLP techniques and transformer architectures</p>
+                <div>
+                    <strong>Topics</strong>
+                    <ul>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="153">
+                                <span>Text preprocessing: tokenization, stemming, lemmatization</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="154">
+                                <span>Word embeddings: Word2Vec, GloVe</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="155">
+                                <span>Transformer architecture: self-attention, encoder/decoder</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="156">
+                                <span>Fine-tuning pre-trained models: BERT, GPT, T5</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="157">
+                                <span>NLP evaluation metrics: BLEU, ROUGE, perplexity</span>
+                            </label>
+                        </li>
+                    
+                    </ul>
+                </div>
+                <div>
+                    <strong>Projects</strong>
+                    <ul>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="project-checkbox" data-project-id="59">
+                                <span>Sentiment Analysis App</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="project-checkbox" data-project-id="60">
+                                <span>Text Summarizer</span>
+                            </label>
+                        </li>
+                    
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="phase-card">
+                <h4>Phase 3 – MLOps &amp; Deployment</h4>
+                <p class="muted">Learn to deploy and maintain ML systems in production</p>
+                <div>
+                    <strong>Topics</strong>
+                    <ul>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="158">
+                                <span>Serve models via API: FastAPI or Flask</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="159">
+                                <span>Containerise with Docker</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="160">
+                                <span>Experiment tracking / model versioning: MLflow, DVC</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="161">
+                                <span>Pipeline orchestration: Airflow / Prefect</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="162">
+                                <span>CI/CD basics: GitHub Actions / Jenkins</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="163">
+                                <span>Cloud deployment: AWS EC2 / GCP VM / serverless</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="164">
+                                <span>Monitoring &amp; drift detection: logs, alerts</span>
+                            </label>
+                        </li>
+                    
+                    </ul>
+                </div>
+                <div>
+                    <strong>Projects</strong>
+                    <ul>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="project-checkbox" data-project-id="61">
+                                <span>Model API Deployment</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="project-checkbox" data-project-id="62">
+                                <span>MLOps Pipeline</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="project-checkbox" data-project-id="63">
+                                <span>Cloud Model API</span>
+                            </label>
+                        </li>
+                    
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="phase-card">
+                <h4>Phase 4 – LLM &amp; RAG Systems</h4>
+                <p class="muted">Build advanced AI systems with LLMs and retrieval</p>
+                <div>
+                    <strong>Topics</strong>
+                    <ul>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="165">
+                                <span>LLM architecture fundamentals</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="166">
+                                <span>Prompt engineering: zero-shot, few-shot, chain-of-thought</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="167">
+                                <span>Retrieval-Augmented Generation (RAG) pipelines</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="168">
+                                <span>Vector databases: FAISS, Chroma, Pinecone</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="169">
+                                <span>Agent frameworks: LangChain, LlamaIndex</span>
+                            </label>
+                        </li>
+                    
+                    </ul>
+                </div>
+                <div>
+                    <strong>Projects</strong>
+                    <ul>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="project-checkbox" data-project-id="64">
+                                <span>RAG Chatbot</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="project-checkbox" data-project-id="65">
+                                <span>Multi-agent Assistant</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="project-checkbox" data-project-id="66">
+                                <span>SQL AI Analyst</span>
+                            </label>
+                        </li>
+                    
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="phase-card">
+                <h4>Phase 5 – Scalable AI Systems &amp; Advanced Topics</h4>
+                <p class="muted">Design and build production-ready AI systems</p>
+                <div>
+                    <strong>Topics</strong>
+                    <ul>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="170">
+                                <span>Distributed training: PyTorch Lightning, Ray</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="171">
+                                <span>Model compression/optimisation: ONNX export, quantization, pruning</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="172">
+                                <span>Streaming pipelines: Kafka, Redis streams</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="173">
+                                <span>Generative models: GANs, VAEs, diffusion models</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="174">
+                                <span>Responsible AI: fairness, interpretability, model cards</span>
+                            </label>
+                        </li>
+                    
+                    </ul>
+                </div>
+                <div>
+                    <strong>Projects</strong>
+                    <ul>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="project-checkbox" data-project-id="67">
+                                <span>End-to-End AI Assistant</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="project-checkbox" data-project-id="68">
+                                <span>Generative AI Demo</span>
+                            </label>
+                        </li>
+                    
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="phase-card">
+                <h4>Phase 6 – Portfolio &amp; Career Prep</h4>
+                <p class="muted">Prepare portfolio and interview materials</p>
+                <div>
+                    <strong>Topics</strong>
+                    <ul>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="175">
+                                <span>Clean up all GitHub repos (structured folder, README, screenshots)</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="176">
+                                <span>Pin &quot;AI Projects&quot; on GitHub profile</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="177">
+                                <span>Write LinkedIn posts about projects</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="178">
+                                <span>Core ML/DL/MLOps interview concepts</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="179">
+                                <span>System design (AI system architecture) preparation</span>
+                            </label>
+                        </li>
+                    
+                    </ul>
+                </div>
+                <div>
+                    <strong>Projects</strong>
+                    <ul>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="project-checkbox" data-project-id="69">
+                                <span>AI Portfolio README</span>
+                            </label>
+                        </li>
+                    
+                    </ul>
+                </div>
+            </div>
+            
+        </section>
+        
+        <section class="roadmap-section">
+            <h3>Quantum Computing Extension</h3>
+            <p class="muted">Advanced extension covering quantum computing and quantum machine learning</p>
+            
+            <div class="phase-card">
+                <h4>Phase 1 – Quantum Foundations</h4>
+                <p class="muted">Master the fundamentals of quantum computing</p>
+                <div>
+                    <strong>Topics</strong>
+                    <ul>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="180">
+                                <span>Qubits, superposition, entanglement basics</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="181">
+                                <span>Dirac (bra-ket) notation</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="182">
+                                <span>Quantum gates: Hadamard, S, T, X, Y, Z, CNOT</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="183">
+                                <span>Linear algebra for quantum: matrices, eigenvalues/vectors, tensor products</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="184">
+                                <span>Quantum circuits &amp; simulation frameworks (basic)</span>
+                            </label>
+                        </li>
+                    
+                    </ul>
+                </div>
+                <div>
+                    <strong>Projects</strong>
+                    <ul>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="project-checkbox" data-project-id="70">
+                                <span>Quantum Circuit Simulator</span>
+                            </label>
+                        </li>
+                    
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="phase-card">
+                <h4>Phase 2 – Quantum Algorithms &amp; ML Basics</h4>
+                <p class="muted">Understand core quantum algorithms and their ML applications</p>
+                <div>
+                    <strong>Topics</strong>
+                    <ul>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="185">
+                                <span>Quantum algorithm overview (Grover, VQE, etc)</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="186">
+                                <span>Hybrid quantum-classical algorithms (variational circuits)</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="187">
+                                <span>Quantum kernel methods, quantum SVMs</span>
+                            </label>
+                        </li>
+                    
+                    </ul>
+                </div>
+                <div>
+                    <strong>Projects</strong>
+                    <ul>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="project-checkbox" data-project-id="71">
+                                <span>Quantum Classifier</span>
+                            </label>
+                        </li>
+                    
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="phase-card">
+                <h4>Phase 3 – Quantum ML &amp; Hybrid Systems</h4>
+                <p class="muted">Build hybrid quantum-classical ML systems</p>
+                <div>
+                    <strong>Topics</strong>
+                    <ul>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="188">
+                                <span>Hybrid quantum-classical ML: combining quantum circuits with classical layers</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="189">
+                                <span>Use quantum ML libraries: PennyLane, TensorFlow Quantum</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="190">
+                                <span>Map a classical ML problem into a quantum-enabled formulation</span>
+                            </label>
+                        </li>
+                    
+                    </ul>
+                </div>
+                <div>
+                    <strong>Projects</strong>
+                    <ul>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="project-checkbox" data-project-id="72">
+                                <span>Quantum-ML Pipeline</span>
+                            </label>
+                        </li>
+                    
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="phase-card">
+                <h4>Phase 4 – Advanced Quantum AI</h4>
+                <p class="muted">Explore cutting-edge quantum AI research</p>
+                <div>
+                    <strong>Topics</strong>
+                    <ul>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="191">
+                                <span>Quantum error correction, scalability of quantum computers</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="192">
+                                <span>Ethical/Responsible quantum AI</span>
+                            </label>
+                        </li>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="193">
+                                <span>Current research directions and limitations</span>
+                            </label>
+                        </li>
+                    
+                    </ul>
+                </div>
+                <div>
+                    <strong>Projects</strong>
+                    <ul>
+                    
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="project-checkbox" data-project-id="73">
+                                <span>Research Demo</span>
+                            </label>
+                        </li>
+                    
+                    </ul>
+                </div>
+            </div>
+            
+        </section>
+        
+    
+
+</div>
+
+
+  </main>
+
+  <footer>
+    <div class="container card">
+  <small>&copy; 2025 Soumit Jana — Built with Django</small>
+    </div>
+  </footer>
+  
+<script>
+// Local checklist persistence for unauthenticated/static users.
+// Stores checked topics/projects in localStorage so the static site behaves like a checklist.
+
+function lsKey(type, id) {
+    return `roadmap_${type}_${id}`;
+}
+
+function saveCheck(type, id, checked) {
+    const key = lsKey(type, id);
+    try {
+        if (checked) localStorage.setItem(key, '1');
+        else localStorage.removeItem(key);
+    } catch (e) {
+        console.warn('localStorage not available', e);
+    }
+}
+
+function loadChecks() {
+    document.querySelectorAll('.topic-checkbox').forEach(cb => {
+        const id = cb.getAttribute('data-topic-id');
+        if (!id) return;
+        const key = lsKey('topic', id);
+        if (localStorage.getItem(key)) cb.checked = true;
+        cb.addEventListener('change', () => saveCheck('topic', id, cb.checked));
+    });
+    document.querySelectorAll('.project-checkbox').forEach(cb => {
+        const id = cb.getAttribute('data-project-id');
+        if (!id) return;
+        const key = lsKey('project', id);
+        if (localStorage.getItem(key)) cb.checked = true;
+        cb.addEventListener('change', () => saveCheck('project', id, cb.checked));
+    });
+}
+
+function addClearButton() {
+    const container = document.querySelector('.card');
+    if (!container) return;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.textContent = 'Clear local checklist';
+    btn.style.marginLeft = '8px';
+    btn.className = 'btn';
+    btn.addEventListener('click', () => {
+        // remove all roadmap keys
+        try {
+            Object.keys(localStorage).forEach(k => {
+                if (k.startsWith('roadmap_topic_') || k.startsWith('roadmap_project_')) localStorage.removeItem(k);
+            });
+            // uncheck all
+            document.querySelectorAll('.topic-checkbox, .project-checkbox').forEach(cb => cb.checked = false);
+        } catch (e) {
+            console.warn('Could not clear localStorage', e);
+        }
+    });
+    const wrapper = document.createElement('div');
+    wrapper.style.textAlign = 'right';
+    wrapper.style.marginTop = '8px';
+    wrapper.appendChild(btn);
+    container.prepend(wrapper);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadChecks();
+    addClearButton();
+});
+</script>
+
+</body>
+</html>

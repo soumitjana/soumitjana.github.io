@@ -78,7 +78,25 @@
                     <strong>Topics</strong>
                     <ul>
                     {% for topic in phase.topics.all %}
-                        <li>{{ topic.name }}</li>
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="{{ topic.id }}">
+                                <span>{{ topic.name }}</span>
+                            </label>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                </div>
+                <div>
+                    <strong>Projects</strong>
+                    <ul>
+                    {% for project in phase.projects.all %}
+                        <li>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="project-checkbox" data-project-id="{{ project.id }}">
+                                <span>{{ project.name }}</span>
+                            </label>
+                        </li>
                     {% endfor %}
                     </ul>
                 </div>
@@ -94,7 +112,70 @@
 
 {% block extra_js %}
 <script>
-// small helper to allow dict_get filter emulation in template without adding a custom filter
-// we will use the form elements rendered in the formset so JS is minimal here
+// Local checklist persistence for unauthenticated/static users.
+// Stores checked topics/projects in localStorage so the static site behaves like a checklist.
+
+function lsKey(type, id) {
+    return `roadmap_${type}_${id}`;
+}
+
+function saveCheck(type, id, checked) {
+    const key = lsKey(type, id);
+    try {
+        if (checked) localStorage.setItem(key, '1');
+        else localStorage.removeItem(key);
+    } catch (e) {
+        console.warn('localStorage not available', e);
+    }
+}
+
+function loadChecks() {
+    document.querySelectorAll('.topic-checkbox').forEach(cb => {
+        const id = cb.getAttribute('data-topic-id');
+        if (!id) return;
+        const key = lsKey('topic', id);
+        if (localStorage.getItem(key)) cb.checked = true;
+        cb.addEventListener('change', () => saveCheck('topic', id, cb.checked));
+    });
+    document.querySelectorAll('.project-checkbox').forEach(cb => {
+        const id = cb.getAttribute('data-project-id');
+        if (!id) return;
+        const key = lsKey('project', id);
+        if (localStorage.getItem(key)) cb.checked = true;
+        cb.addEventListener('change', () => saveCheck('project', id, cb.checked));
+    });
+}
+
+function addClearButton() {
+    const container = document.querySelector('.card');
+    if (!container) return;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.textContent = 'Clear local checklist';
+    btn.style.marginLeft = '8px';
+    btn.className = 'btn';
+    btn.addEventListener('click', () => {
+        // remove all roadmap keys
+        try {
+            Object.keys(localStorage).forEach(k => {
+                if (k.startsWith('roadmap_topic_') || k.startsWith('roadmap_project_')) localStorage.removeItem(k);
+            });
+            // uncheck all
+            document.querySelectorAll('.topic-checkbox, .project-checkbox').forEach(cb => cb.checked = false);
+        } catch (e) {
+            console.warn('Could not clear localStorage', e);
+        }
+    });
+    const wrapper = document.createElement('div');
+    wrapper.style.textAlign = 'right';
+    wrapper.style.marginTop = '8px';
+    wrapper.appendChild(btn);
+    container.prepend(wrapper);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadChecks();
+    addClearButton();
+});
 </script>
 {% endblock %}

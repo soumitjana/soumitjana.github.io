@@ -4,11 +4,25 @@ on:
   push:
     branches: [ main ]
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Debug: show runner info and repo files
+        run: |
+          echo "--- Python ---"
+          python --version || true
+          echo "--- Files in repo root ---"
+          ls -la
+          echo "--- requirements.txt (head) ---"
+          if [ -f requirements.txt ]; then head -n 50 requirements.txt; fi
+          echo "--- pip freeze ---"
+          python -m pip freeze || true
+
       - name: Check out repository
         uses: actions/checkout@v4
 

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personal Website</title>
+  <style>
+    /* Premium palette */
+    :root{
+      --blue-popsicle: #0f2862;
+      --redline: #9e363a;
+      --purple-shadow: #091f36;
+      --grey-blue-leaf: #4f5f76;
+      --bg: #f7f9fb;
+      --muted: #6b7a8a;
+    }
+    body{font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:var(--purple-shadow); margin:0}
+    header{background:linear-gradient(90deg,var(--blue-popsicle),var(--purple-shadow)); color:white; padding:28px 24px}
+    header h1{margin:0;font-size:1.6rem}
+    header p{margin:6px 0 0; color:rgba(255,255,255,0.9)}
+    .container{max-width:1000px;margin:28px auto;padding:0 16px}
+    .card{background:white;border-radius:10px;box-shadow:0 6px 20px rgba(15,40,98,0.06);padding:18px;margin-bottom:16px}
+    h2.section-title{color:var(--blue-popsicle);margin:0 0 8px}
+    .phase-card{border-left:4px solid var(--grey-blue-leaf);padding:12px 16px;margin:12px 0;border-radius:6px}
+    label.checkbox-container{display:flex;align-items:center;gap:10px}
+    input[type=checkbox]{width:18px;height:18px}
+    .muted{color:var(--muted)}
+    footer{padding:20px 0;text-align:center;color:var(--muted)}
+    .btn{background:var(--blue-popsicle);color:white;padding:8px 12px;border-radius:6px;border:none;cursor:pointer}
+  </style>
+  
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Soumit Jana — Personal Website</h1>
+      <p>Learning roadmap & projects</p>
+    </div>
+  </header>
+
+  <main class="container">
+    
+<div class="card">
+    <h2 class="section-title">🧭 Learning Roadmap</h2>
+
+    
+        <p class="muted">Sign in to track your progress. The roadmap is visible below.</p>
+        
+        <section class="roadmap-section">
+            <h3>Full-Stack AI Engineer Path</h3>
+            <p class="muted">A comprehensive roadmap covering deep learning, MLOps, and large language models</p>
+            
+            <div class="phase-card">
+                <h4>Phase 1 – Deep Learning Foundations</h4>
+                <p class="muted">Master fundamental deep learning concepts and PyTorch</p>
+                <div>
+                    <strong>Topics</strong>
+                    <ul>
+                    
+                        <li>Neural network basics: perceptron, activation functions, forward/backprop</li>
+                    
+                        <li>Loss functions (MSE, Cross-Entropy), optimizers (SGD, Adam)</li>
+                    
+                        <li>Regularisation: dropout, batch norm, early stopping</li>
+                    
+                        <li>CNNs: convolution, pooling, feature maps</li>
+                    
+                        <li>RNNs/LSTMs/GRUs: sequence modeling</li>
+                    
+                        <li>PyTorch: tensor operations, DataLoader, custom training loop</li>
+                    
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="phase-card">
+                <h4>Phase 2 – NLP &amp; Transformers</h4>
+                <p class="muted">Master modern NLP techniques and transformer architectures</p>
+                <div>
+                    <strong>Topics</strong>
+                    <ul>
+                    
+                        <li>Text preprocessing: tokenization, stemming, lemmatization</li>
+                    
+                        <li>Word embeddings: Word2Vec, GloVe</li>
+                    
+                        <li>Transformer architecture: self-attention, encoder/decoder</li>
+                    
+                        <li>Fine-tuning pre-trained models: BERT, GPT, T5</li>
+                    
+                        <li>NLP evaluation metrics: BLEU, ROUGE, perplexity</li>
+                    
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="phase-card">
+                <h4>Phase 3 – MLOps &amp; Deployment</h4>
+                <p class="muted">Learn to deploy and maintain ML systems in production</p>
+                <div>
+                    <strong>Topics</strong>
+                    <ul>
+                    
+                        <li>Serve models via API: FastAPI or Flask</li>
+                    
+                        <li>Containerise with Docker</li>
+                    
+                        <li>Experiment tracking / model versioning: MLflow, DVC</li>
+                    
+                        <li>Pipeline orchestration: Airflow / Prefect</li>
+                    
+                        <li>CI/CD basics: GitHub Actions / Jenkins</li>
+                    
+                        <li>Cloud deployment: AWS EC2 / GCP VM / serverless</li>
+                    
+                        <li>Monitoring &amp; drift detection: logs, alerts</li>
+                    
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="phase-card">
+                <h4>Phase 4 – LLM &amp; RAG Systems</h4>
+                <p class="muted">Build advanced AI systems with LLMs and retrieval</p>
+                <div>
+                    <strong>Topics</strong>
+                    <ul>
+                    
+                        <li>LLM architecture fundamentals</li>
+                    
+                        <li>Prompt engineering: zero-shot, few-shot, chain-of-thought</li>
+                    
+                        <li>Retrieval-Augmented Generation (RAG) pipelines</li>
+                    
+                        <li>Vector databases: FAISS, Chroma, Pinecone</li>
+                    
+                        <li>Agent frameworks: LangChain, LlamaIndex</li>
+                    
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="phase-card">
+                <h4>Phase 5 – Scalable AI Systems &amp; Advanced Topics</h4>
+                <p class="muted">Design and build production-ready AI systems</p>
+                <div>
+                    <strong>Topics</strong>
+                    <ul>
+                    
+                        <li>Distributed training: PyTorch Lightning, Ray</li>
+                    
+                        <li>Model compression/optimisation: ONNX export, quantization, pruning</li>
+                    
+                        <li>Streaming pipelines: Kafka, Redis streams</li>
+                    
+                        <li>Generative models: GANs, VAEs, diffusion models</li>
+                    
+                        <li>Responsible AI: fairness, interpretability, model cards</li>
+                    
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="phase-card">
+                <h4>Phase 6 – Portfolio &amp; Career Prep</h4>
+                <p class="muted">Prepare portfolio and interview materials</p>
+                <div>
+                    <strong>Topics</strong>
+                    <ul>
+                    
+                        <li>Clean up all GitHub repos (structured folder, README, screenshots)</li>
+                    
+                        <li>Pin &quot;AI Projects&quot; on GitHub profile</li>
+                    
+                        <li>Write LinkedIn posts about projects</li>
+                    
+                        <li>Core ML/DL/MLOps interview concepts</li>
+                    
+                        <li>System design (AI system architecture) preparation</li>
+                    
+                    </ul>
+                </div>
+            </div>
+            
+        </section>
+        
+        <section class="roadmap-section">
+            <h3>Quantum Computing Extension</h3>
+            <p class="muted">Advanced extension covering quantum computing and quantum machine learning</p>
+            
+            <div class="phase-card">
+                <h4>Phase 1 – Quantum Foundations</h4>
+                <p class="muted">Master the fundamentals of quantum computing</p>
+                <div>
+                    <strong>Topics</strong>
+                    <ul>
+                    
+                        <li>Qubits, superposition, entanglement basics</li>
+                    
+                        <li>Dirac (bra-ket) notation</li>
+                    
+                        <li>Quantum gates: Hadamard, S, T, X, Y, Z, CNOT</li>
+                    
+                        <li>Linear algebra for quantum: matrices, eigenvalues/vectors, tensor products</li>
+                    
+                        <li>Quantum circuits &amp; simulation frameworks (basic)</li>
+                    
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="phase-card">
+                <h4>Phase 2 – Quantum Algorithms &amp; ML Basics</h4>
+                <p class="muted">Understand core quantum algorithms and their ML applications</p>
+                <div>
+                    <strong>Topics</strong>
+                    <ul>
+                    
+                        <li>Quantum algorithm overview (Grover, VQE, etc)</li>
+                    
+                        <li>Hybrid quantum-classical algorithms (variational circuits)</li>
+                    
+                        <li>Quantum kernel methods, quantum SVMs</li>
+                    
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="phase-card">
+                <h4>Phase 3 – Quantum ML &amp; Hybrid Systems</h4>
+                <p class="muted">Build hybrid quantum-classical ML systems</p>
+                <div>
+                    <strong>Topics</strong>
+                    <ul>
+                    
+                        <li>Hybrid quantum-classical ML: combining quantum circuits with classical layers</li>
+                    
+                        <li>Use quantum ML libraries: PennyLane, TensorFlow Quantum</li>
+                    
+                        <li>Map a classical ML problem into a quantum-enabled formulation</li>
+                    
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="phase-card">
+                <h4>Phase 4 – Advanced Quantum AI</h4>
+                <p class="muted">Explore cutting-edge quantum AI research</p>
+                <div>
+                    <strong>Topics</strong>
+                    <ul>
+                    
+                        <li>Quantum error correction, scalability of quantum computers</li>
+                    
+                        <li>Ethical/Responsible quantum AI</li>
+                    
+                        <li>Current research directions and limitations</li>
+                    
+                    </ul>
+                </div>
+            </div>
+            
+        </section>
+        
+    
+
+</div>
+
+
+  </main>
+
+  <footer>
+    <div class="container card">
+  <small>&copy; 2025 Soumit Jana — Built with Django</small>
+    </div>
+  </footer>
+  
+<script>
+// small helper to allow dict_get filter emulation in template without adding a custom filter
+// we will use the form elements rendered in the formset so JS is minimal here
+</script>
+
+</body>
+</html>

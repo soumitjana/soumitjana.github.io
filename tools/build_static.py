@@ -39,6 +39,11 @@ def build_static_site():
     # Write static roadmap file
     with open(roadmap_path / 'index.html', 'w', encoding='utf-8') as f:
         f.write(roadmap_html)
+
+    # Create an empty .nojekyll so GitHub Pages won't run Jekyll (prevents ignoring files)
+    nojekyll_path = roadmap_path / '.nojekyll'
+    if not nojekyll_path.exists():
+        nojekyll_path.write_text('', encoding='utf-8')
     
     # Copy CSS file if it exists
     css_source = project_root / 'web.css'

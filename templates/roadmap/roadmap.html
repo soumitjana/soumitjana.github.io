@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="card">
+    <h2 class="section-title">🧭 Learning Roadmap</h2>
+
+    {% if topic_formset %}
+    <form method="post">
+        {% csrf_token %}
+        {{ topic_formset.management_form }}
+        {% for cat in categories_with_forms %}
+        <section class="roadmap-section">
+            <h3>{{ cat.category.name }}</h3>
+            <p class="muted">{{ cat.category.description }}</p>
+
+            {% for phase_entry in cat.phases %}
+            {% with phase=phase_entry.phase %}
+            <div class="phase-card">
+                <h4>Phase {{ phase.order }} – {{ phase.title }}</h4>
+                <p class="muted">{{ phase.goal }}</p>
+
+                <div class="topics-list">
+                    <h5>Topics</h5>
+                    {% for t in phase_entry.topics %}
+                        <div class="topic-item">
+                            {% if t.form %}
+                                {{ t.form.topic }}
+                                <label class="checkbox-container">
+                                    {{ t.form.completed }}
+                                    <span>{{ t.form.topic_name|default:t.topic.name }}</span>
+                                </label>
+                            {% else %}
+                                <label class="checkbox-container">
+                                    <input type="checkbox" disabled>
+                                    <span>{{ t.topic.name }}</span>
+                                </label>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <div class="projects-list">
+                    <h5>Projects</h5>
+                    {% for project in phase_entry.projects %}
+                        <div class="project-item">
+                            <label class="checkbox-container">
+                                <input type="checkbox" data-project-id="{{ project.id }}"
+                                    {% if project.id in project_progress %}checked{% endif %}
+                                    class="project-checkbox">
+                                <span>{{ project.name }}</span>
+                            </label>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endwith %}
+            {% endfor %}
+
+        </section>
+        {% endfor %}
+
+        <div style="margin-top:12px;text-align:right">
+            <button class="btn" type="submit">Save progress</button>
+        </div>
+    </form>
+    {% else %}
+        <p class="muted">Sign in to track your progress. The roadmap is visible below.</p>
+        {% for category in categories %}
+        <section class="roadmap-section">
+            <h3>{{ category.name }}</h3>
+            <p class="muted">{{ category.description }}</p>
+            {% for phase in category.phases.all %}
+            <div class="phase-card">
+                <h4>Phase {{ phase.order }} – {{ phase.title }}</h4>
+                <p class="muted">{{ phase.goal }}</p>
+                <div>
+                    <strong>Topics</strong>
+                    <ul>
+                    {% for topic in phase.topics.all %}
+                        <li>{{ topic.name }}</li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+        </section>
+        {% endfor %}
+    {% endif %}
+
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// small helper to allow dict_get filter emulation in template without adding a custom filter
+// we will use the form elements rendered in the formset so JS is minimal here
+</script>
+{% endblock %}

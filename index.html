@@ -3,29 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Personal Website</title>
-  <link rel="stylesheet" href="web.css">
+  <title>Soumit Jana — Personal Website</title>
+  <style>
+    :root{
+      --blue-popsicle: #0f2862;
+      --redline: #9e363a;
+      --purple-shadow: #091f36;
+      --grey-blue-leaf: #4f5f76;
+      --bg: #f7f9fb;
+    }
+    body{font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial; background:var(--bg); color:var(--purple-shadow); margin:0}
+    header{background:linear-gradient(90deg,var(--blue-popsicle),var(--purple-shadow)); color:white; padding:28px 24px}
+    header h1{margin:0}
+    .container{max-width:900px;margin:28px auto;padding:0 16px}
+    .card{background:white;border-radius:10px;padding:18px;box-shadow:0 6px 20px rgba(15,40,98,0.06)}
+    a.cta{display:inline-block;margin-top:12px;padding:8px 12px;background:var(--blue-popsicle);color:white;border-radius:6px;text-decoration:none}
+  </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to My Website</h1>
-    <p>This is a simple site hosted on GitHub Pages.</p>
+    <div class="container">
+      <h1>Soumit Jana</h1>
+      <p>Roadmaps, projects and blog — learning in public.</p>
+    </div>
   </header>
 
-  <main>
-    <section>
+  <main class="container">
+    <div class="card">
       <h2>About Me</h2>
-      <p>Hello! I’m building my personal site using HTML and CSS.</p>
-    </section>
+      <p>Hello! I’m building my personal site using Django and a simple, focused roadmap to track learning.</p>
+      <a href="/roadmap/" class="cta">View Roadmap</a>
+    </div>
 
-    <section>
+    <div class="card" style="margin-top:12px">
       <h2>Contact</h2>
       <p>You can reach me at <a href="mailto:example@email.com">example@email.com</a></p>
-    </section>
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2025 My Name</p>
+  <footer style="text-align:center;padding:20px;color:#6b7a8a">
+    <small>&copy; 2025 Soumit Jana</small>
   </footer>
 </body>
 </html>

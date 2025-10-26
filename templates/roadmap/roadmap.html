@@ -80,7 +80,8 @@
                     {% for topic in phase.topics.all %}
                         <li>
                             <label class="checkbox-container">
-                                <input type="checkbox" class="topic-checkbox" data-topic-id="{{ topic.id }}">
+                                <input type="checkbox" class="topic-checkbox" data-topic-id="{{ topic.id }}"
+                                    {% if static_checked_topics and topic.id in static_checked_topics %}checked{% endif %}>
                                 <span>{{ topic.name }}</span>
                             </label>
                         </li>
@@ -93,7 +94,8 @@
                     {% for project in phase.projects.all %}
                         <li>
                             <label class="checkbox-container">
-                                <input type="checkbox" class="project-checkbox" data-project-id="{{ project.id }}">
+                                <input type="checkbox" class="project-checkbox" data-project-id="{{ project.id }}"
+                                    {% if static_checked_projects and project.id in static_checked_projects %}checked{% endif %}>
                                 <span>{{ project.name }}</span>
                             </label>
                         </li>

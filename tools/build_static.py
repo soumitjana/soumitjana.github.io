@@ -18,6 +18,7 @@ django.setup()
 
 from django.template.loader import render_to_string
 from apps.roadmap.models import Category
+import json
 
 def build_static_site():
     """Build static files for GitHub Pages."""
@@ -27,8 +28,33 @@ def build_static_site():
         'phases__projects'
     ).all()
     
+    # Optionally read a local checked.json exported from browser localStorage
+    checked_topics = set()
+    checked_projects = set()
+    checked_file = project_root / 'tools' / 'checked.json'
+    if checked_file.exists():
+        try:
+            with open(checked_file, 'r', encoding='utf-8') as fh:
+                data = json.load(fh)
+            # Expect lists of ids (numbers or strings)
+            for t in data.get('topics', []):
+                try:
+                    checked_topics.add(int(t))
+                except Exception:
+                    pass
+            for p in data.get('projects', []):
+                try:
+                    checked_projects.add(int(p))
+                except Exception:
+                    pass
+            print(f'Loaded checked items: {len(checked_topics)} topics, {len(checked_projects)} projects')
+        except Exception as e:
+            print('Failed to read tools/checked.json:', e)
+
     context = {
         'categories': categories,
+        'static_checked_topics': checked_topics,
+        'static_checked_projects': checked_projects,
     }
     
     # Render roadmap page
